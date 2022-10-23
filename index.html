@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingenieria de Planta SVAP</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <meta name="robots" content="index, follow">
+</head>
+<body>
+    <section id="seccionPortada">
+      <h1 class="titulo">FACILIDADES</h1> 
+      <h2 class="subtitulo">Menu:</h2>
+      <div id="contenedorOpciones" class="tarjetas">
+      </div>
+      <button id="botonSeleccionar" class="estiloBoton">Seleccionar</button>
+    </section>
+
+    <section id="seccionSeleccionarActividad">
+      <h1 class="titulo">Plan de entrenamiento</h1> 
+      <h2 class="subtitulo">Selecciona la actividad que desees para entrenamiento tecnico</h2>
+      <div id="actividades">
+          <div id="contenedorActividades" class="tarjetas"></div>
+          <button id="botonSeleccionarActividad" class="estiloBoton">Seleccionar</button>
+      </div>
+      
+    </section>
+
+    <section id="verMapa">
+      <h2 class="subtitulo">Consigue tu epp correspondiente</h2>
+      <canvas id="mapa"></canvas>
+      <div class="controles">
+        <button ontouchstart="moverTecnico('up')" ontouchend="detenerTecnico()" class="botonControl" id="up" >⬆</button>
+        <div>
+          <button ontouchstart="moverTecnico('left')" ontouchend="detenerTecnico()" class="botonControl" id="left" >⬅</button>
+          <button ontouchstart="moverTecnico('down')" ontouchend="detenerTecnico()" class="botonControl" id="down">⬇</button>
+          <button ontouchstart="moverTecnico('right')" ontouchend="detenerTecnico()" class="botonControl" id="right" >➡</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="seccionAreas">
+      <h1 class="titulo">Areas del departamento</h1>
+      <h2 class="subtitulo">Componentes por equipo</h2>
+      <ul>
+        <a href="https://es.wikipedia.org/wiki/Compresor_(m%C3%A1quina)"
+        target="_blanck">
+        <li>Compresores</li>
+        </a>
+          <ol>
+            <li>Filtros de aire</li>
+            <li>Filtros de aceite</li>
+            <li>Elementos mecanicos</li>
+            <li>Ductos de aire</li>
+            <li>Manometros</li>
+          </ol>
+        <a href="https://es.wikipedia.org/wiki/Torre_de_refrigeraci%C3%B3n"
+        target="_blanck">  
+        <li>Torres de enfriamiento</li>
+        </a>
+          <ol>
+            <li>Ventiladores</li>
+            <li>Bombas centrifugas</li>
+            <li>Aspersores</li>
+            <li>Tina de agua</li>
+            <li>Trinchera</li>
+          </ol>
+        <a href="https://es.wikipedia.org/wiki/Subestaci%C3%B3n_el%C3%A9ctrica"
+        target="_blanck">  
+        <li>Subestacion electrica</li>
+        </a>
+          <ol>
+            <li>Master Pack</li>
+            <li>Transformador</li>
+            <li>Extractores de aire</li>
+            <li>Display</li>
+            <li>Fusibles</li>
+          </ol>
+      </ul>
+    </section>
+    <script src="./js/codigo.js"></script>
+</body>
+</html>
