@@ -17,14 +17,36 @@
       <button id="botonSeleccionar" class="estiloBoton">Seleccionar</button>
     </section>
  
-    <section id="seccionSeleccionarActividad">
+    <section id="solicitudDeDatos">
+      <h1 class="titulo">Plan de entrenamiento</h1>
+      <h2 class="subtitulo">Solicitud de datos</h2>
+      <form class="formulario" action="" >
+        <label class="preguntas" for="nombre">
+          <span>Nombre</span>
+          <input type="text" id="nombre" width="30" name="nombre" autocomplete="name" placeholder="Nombre   Apellido" required>
+        </label>
+        <label class="preguntas" for="fecha">
+          <span>Fecha de ingreso al departamento</span>
+          <input type="date" id="fecha" width="30" required>
+        </label>
+        <label class="preguntas" for="turno">
+          <span>Turno</span>
+          <select id="turno" name="turno" placeholder="1, 2 o 3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </label>
+      <input class="boton" type="button" id="botonDatos" value="Enviar datos">
+      </form>
+    </section>
+    
+    <section class="estiloSeccionActividad" id="seccionSeleccionarActividad">
       <h1 class="titulo">Plan de entrenamiento</h1> 
       <h2 class="subtitulo">Selecciona la actividad que desees para entrenamiento tecnico</h2>
       <div id="actividades">
           <div id="contenedorActividades" class="tarjetas"></div>
           <button id="botonSeleccionarActividad" class="estiloBoton">Seleccionar</button>
       </div>
-      
     </section>
  
     <section id="verMapa">
@@ -62,7 +84,7 @@
             <img src="https://drive.google.com/uc?export=view&id=1OPgL3_TENgIz_QgJvSlQHQO5Jy_ucHBP" width="250" height="180" alt="imagen de compresor">
             <figcaption>Compresores BIW</figcaption>
           </div>
-          <iframe width="320" height="195" src="https://www.youtube.com/embed/3XO0fxtOgac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe referrerpolicy="origin-when-cross-origin" class="lazy" width="320" height="195" src="https://www.youtube.com/embed/3XO0fxtOgac?origin=http://127.0.0.1:5500/index.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>
         <figure class="estructuraImagen">
           <div>
@@ -82,7 +104,7 @@
             <img src="https://drive.google.com/uc?export=view&id=1aePdjwfvQheav5xq4lvHSGt0eO10o7hj" width="250" height="180" alt="imagen de torres">
             <figcaption>Torres de Enfriamiento BIW</figcaption>
           </div>
-          <iframe width="320" height="195" src="https://www.youtube.com/embed/29R6HBuBzGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe referrerpolicy="origin-when-cross-origin" width="320" height="195" src="https://www.youtube.com/embed/29R6HBuBzGE?origin=http://127.0.0.1:5500/index.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>
         <figure class="estructuraImagen">
           <div>
@@ -102,7 +124,7 @@
             <img src="https://drive.google.com/uc?export=view&id=1mBEpJlmdHV0dZ1ud21ium571T-54ZVAO" width="250" height="180" alt="imagen de subestacion">
             <figcaption>Subestacion Electrica BIW</figcaption>
           </div>
-          <iframe width="320" height="195" src="https://www.youtube.com/embed/HRumZuSBZQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe referrerpolicy="origin-when-cross-origin" width="320" height="195" src="https://www.youtube.com/embed/HRumZuSBZQ8?origin=http://127.0.0.1:5500/index.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </figure>  
       </ul>
     </section>

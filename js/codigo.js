@@ -3,6 +3,7 @@ const seccionPortada=document.getElementById("seccionPortada")
 const seccionActividad=document.getElementById("seccionSeleccionarActividad")
 const seccionMapa=document.getElementById("verMapa")
 const seccionAreas=document.getElementById("seccionAreas")
+const seccionDatos=document.getElementById("solicitudDeDatos")
  
 //Contenedores
 const contenedorTareas=document.getElementById("contenedorOpciones")
@@ -19,9 +20,14 @@ let inputDesenergizadoMaster
 let inputTapadoGoteras
 let inputTomaLecturas
  
+let inputNombre=document.getElementById("nombre")
+let inputTurno=document.getElementById("fecha")
+let inputIngreso=document.getElementById("turno")
+ 
 //Botones
 let botonSeleccionarTarea=document.getElementById("botonSeleccionar")
 let botonSeleccionarActividad=document.getElementById("botonSeleccionarActividad")
+let botonDatos=document.getElementById("botonDatos")
  
 let actividades=[]
 let tareas=[]
@@ -59,7 +65,7 @@ window.addEventListener("load", start)
 function start(){
     seccionActividad.style.display="none"
     seccionMapa.style.display="none"
-    //seccionPortada.style.display="none"
+    seccionDatos.style.display="none"
     seccionAreas.style.display="none"
     
     tareas.forEach((tarea) => {
@@ -78,8 +84,8 @@ function start(){
  
 function seleccionarTarea() {
     if(inputPlanEntrenamiento.checked){
-        seccionActividad.style.display="grid"
-        planDeEntrenamiento()
+        seccionDatos.style.display="grid"
+        datosRequest()
     } else if (inputOrganigrama.checked) {
     } else if (inputAreas.checked){
         seccionAreas.style.display="grid"
@@ -90,7 +96,17 @@ function seleccionarTarea() {
     seccionPortada.style.display="none"
 }
  
+function datosRequest() {
+    seccionDatos.style.display="flex"
+    botonDatos.addEventListener("click", planDeEntrenamiento)
+}
+ 
 function planDeEntrenamiento() {
+    if(inputNombre.value == "" || inputTurno.value == "" || inputIngreso.value == "") {
+        alert("Rellena los campos")
+    } else {
+    seccionDatos.style.display="none"
+    seccionActividad.style.display="flex"
     actividades.forEach((actividad) => {
         opcionDeActividades=
         `<input type="radio" name="actividad" id=${actividad.id}>${actividad.nombre}</input> 
@@ -102,9 +118,10 @@ function planDeEntrenamiento() {
         inputTapadoGoteras=document.getElementById("tapadoGoteras")
         inputTomaLecturas=document.getElementById("tomaLecturas")
     })
-    botonSeleccionarActividad.addEventListener("click", seleccionarActividadEnetrenamiento())
+    botonSeleccionarActividad.addEventListener("click", seleccionarActividadEnetrenamiento)
+}
 }
  
 function seleccionarActividadEnetrenamiento() {
-    
+    console.log("botonActividadEntrenamiento");
 }
