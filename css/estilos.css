@@ -26,10 +26,63 @@
 }
  
 .boton {
+    display: flex;
+    align-items: center;
     margin-top: 15px;
+    width: 185px;
+    height: 55px;
+    border-radius: 20px;
+    font-size: 23px;
+    justify-content: center;
 }
  
 .estiloSeccionActividad {
     display: flex;
     flex-direction: column;
 }
+ 
+#contenedorOpciones input {
+    display: none;
+}
+ 
+.titulo {
+    font-size: 43px;
+    color: snow;
+}
+ 
+.subtitulo {
+    font-size: 33px;
+    color: snow;
+    margin: 10px
+}
+ 
+.estiloTarea {
+    display: flex;
+    width: 215px;
+    height: 95px;
+    background: #256D85;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    font-size: 23px;
+    margin: 15px;
+    color: snow
+}
+ 
+input:checked + label{
+    background-color: skyblue;
+}
+ 
+#seccionPortada {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+}
+ 
+ 
+

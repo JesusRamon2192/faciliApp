@@ -4,6 +4,7 @@ const seccionActividad=document.getElementById("seccionSeleccionarActividad")
 const seccionMapa=document.getElementById("verMapa")
 const seccionAreas=document.getElementById("seccionAreas")
 const seccionDatos=document.getElementById("solicitudDeDatos")
+const seccionBody=document.getElementById("cuerpo")
  
 //Contenedores
 const contenedorTareas=document.getElementById("contenedorOpciones")
@@ -63,16 +64,18 @@ tareas.push(planEntrenamiento, organigrama, areas)
 window.addEventListener("load", start)
  
 function start(){
+    
     seccionActividad.style.display="none"
     seccionMapa.style.display="none"
     seccionDatos.style.display="none"
     seccionAreas.style.display="none"
-    
+    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1m3TuqSxxwDwjXxe_Fj7CsNkUBvdcJW1G)"
     tareas.forEach((tarea) => {
         opcionDeTareas=
-        `<input type="radio" name="tarea" id=${tarea.id}>${tarea.nombre}</input> 
-        <label class="tarjetaTarea" for=${tarea.id}>
-        </label> <br><br>`
+        `<input type="radio" name="tarea" id=${tarea.id} />
+        <label class="estiloTarea" for=${tarea.id}>
+            <p>${tarea.nombre}</p> 
+        </label> `
         contenedorTareas.innerHTML += opcionDeTareas
  
         inputPlanEntrenamiento=document.getElementById("planEntrenamiento")
@@ -118,10 +121,11 @@ function planDeEntrenamiento() {
         inputTapadoGoteras=document.getElementById("tapadoGoteras")
         inputTomaLecturas=document.getElementById("tomaLecturas")
     })
-    botonSeleccionarActividad.addEventListener("click", seleccionarActividadEnetrenamiento)
+    botonSeleccionarActividad.addEventListener("click", seleccionarActividadEnetrenamiento())
 }
 }
  
 function seleccionarActividadEnetrenamiento() {
-    console.log("botonActividadEntrenamiento");
+    
 }
+ 
