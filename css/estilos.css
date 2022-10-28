@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+ 
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+ 
 .estructuraImagen {
     display: flex;
     column-gap: 30px;
@@ -23,6 +36,15 @@
     display: flex;
     row-gap: 30px;
     flex-direction: column;
+    margin: 10px;
+    opacity: 70%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+ 
+.formulario label {
+    color: azure;
 }
  
 .boton {
@@ -48,6 +70,7 @@
 .titulo {
     font-size: 43px;
     color: snow;
+    margin: 10px;
 }
  
 .subtitulo {
@@ -80,9 +103,15 @@ input:checked + label{
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
  
+.logo {
+    position: absolute;
+    right: 181px;
+    top: 20px;
+    width: 225px;
+    height: 122px;
+    border-radius: 10px;
+}
  
-

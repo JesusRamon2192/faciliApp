@@ -100,6 +100,7 @@ function seleccionarTarea() {
 }
  
 function datosRequest() {
+    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=19tJaPgLBqV-_EA971srDH9XIa5qF_uda)"
     seccionDatos.style.display="flex"
     botonDatos.addEventListener("click", planDeEntrenamiento)
 }
@@ -128,4 +129,5 @@ function planDeEntrenamiento() {
 function seleccionarActividadEnetrenamiento() {
     
 }
+ 
  
