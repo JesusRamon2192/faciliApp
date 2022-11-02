@@ -115,3 +115,26 @@ input:checked + label{
     border-radius: 10px;
 }
  
+ol {
+    background-color: #1da7c9;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+ 
+li.estiloEquipo {
+    background-color: #146c86;
+    color: #121723;
+    border-radius: 5px;
+    list-style: none;
+}
+ 
+a{
+    text-decoration: none;
+}
+ 
+figcaption {
+    background-color: #1da7c9;
+    color: black;
+    border-radius: 1.5px;
+    margin: 3px;
+}

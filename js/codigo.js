@@ -92,6 +92,7 @@ function seleccionarTarea() {
     } else if (inputOrganigrama.checked) {
     } else if (inputAreas.checked){
         seccionAreas.style.display="grid"
+        paginaAreas()
     } else {
         alert("Selecciona una opcion para avanzar")
         location.reload()
@@ -123,11 +124,15 @@ function planDeEntrenamiento() {
         inputTomaLecturas=document.getElementById("tomaLecturas")
     })
     botonSeleccionarActividad.addEventListener("click", seleccionarActividadEnetrenamiento())
+    }       
 }
+ 
+function paginaAreas() {
+    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1qodlRQUV0uTPKGBbBzZDV8Bmqa_1VjeW)"
+    seccionBody.style.height="118vh"
 }
  
 function seleccionarActividadEnetrenamiento() {
     
 }
- 
  
