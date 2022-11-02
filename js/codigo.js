@@ -129,7 +129,7 @@ function planDeEntrenamiento() {
  
 function paginaAreas() {
     seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1qodlRQUV0uTPKGBbBzZDV8Bmqa_1VjeW)"
-    seccionBody.style.height="118vh"
+    seccionBody.style.width="118%"
 }
  
 function seleccionarActividadEnetrenamiento() {
