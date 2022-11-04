@@ -3,22 +3,25 @@
     border: 0;
     box-sizing: border-box; 
 }
-
+ 
 html {
     font-size: 62.5%;
 }
  
 body {
-    background-size: 100% 100%;
+    background-size: 100% 115%;
     background-repeat: no-repeat;
     margin: 0;
     height: 100vh;
 }
  
 .estructuraImagen {
-    display: flex;
     column-gap: 10%;
     margin: 2.5%;
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(108, 122, 137, .8);
 }
  
 .contenedorOpciones {
@@ -73,15 +76,19 @@ body {
 }
  
 .titulo {
+    display: flex;
     font-size: 4.3rem;
     color: snow;
     margin: 10px;
+    justify-content: center;
 }
  
 .subtitulo {
     font-size: 3.3rem;
     color: snow;
-    margin: 10px
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 }
  
 .estiloTarea {
@@ -142,14 +149,27 @@ a{
 figcaption {
     background-color: #1da7c9;
     color: black;
-    border-radius: 1.5px;
+    border-radius: 31.5px;
     margin: 3px;
+    justify-content: center;
+    display: flex;
 }
-
+ 
+.imagen {
+    border-radius: 30px;
+    margin: 15px;
+}
+ 
 figure div {
     font-size: 1.8rem;
 }
-
+ 
+.estilosAreas {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+ 
 @media (max-width: 880px){
     .logo {
         position: absolute;
@@ -157,8 +177,15 @@ figure div {
         left: 13%;
     }
     body {
-        background-size: 100% 100%;
+       /*  background-size: 100% 100%; */
         background-repeat: no-repeat;
         margin: 0;
+       /*  height: 100%; */
+        width: 100%;
     }
+   /*  .estilosAreas {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    } */
 }
