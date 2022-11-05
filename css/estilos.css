@@ -9,19 +9,23 @@ html {
 }
  
 body {
-    background-size: 100% 115%;
+    background-size: 100% 120%;
     background-repeat: no-repeat;
     margin: 0;
     height: 100vh;
 }
  
 .estructuraImagen {
+    display: flex;
     column-gap: 10%;
     margin: 2.5%;
     border: 3px solid white;
     padding: 20px;
     border-radius: 10px;
     background: rgba(108, 122, 137, .8);
+    width: 30rem;
+    flex-direction: column;
+    align-items: center;
 }
  
 .contenedorOpciones {
@@ -157,7 +161,9 @@ figcaption {
  
 .imagen {
     border-radius: 30px;
-    margin: 15px;
+    margin-top: 15px;
+    width: 212px;
+    height: 175px;
 }
  
 figure div {
@@ -166,8 +172,14 @@ figure div {
  
 .estilosAreas {
     display: flex;
-    justify-content: center;
     flex-flow: wrap;
+    justify-content: center;
+}
+ 
+.video {
+    width: 255px;
+    height: 150px;
+    border-radius: 15px;
 }
  
 @media (max-width: 880px){
@@ -189,3 +201,5 @@ figure div {
         align-items: center;
     } */
 }
+ 
+ 
