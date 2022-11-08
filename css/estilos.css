@@ -1,3 +1,10 @@
+:root {
+    --nivel1Color: #8dccad;
+    --nivel2Color: #f5cc7f;
+    --nivel3Color: #7b9fe0;
+    --nivel4Color: #f27c8d;
+    --black: white;
+}
 *{
     margin: 0;
     border: 0;
@@ -9,7 +16,7 @@ html {
 }
  
 body {
-    background-size: 100% 130%;
+    background-size: 100% 120%;
     background-repeat: no-repeat;
     margin: 0;
     height: 100vh;
@@ -132,7 +139,51 @@ input:checked + label{
     border-radius: 10px;
 }
  
-ol {
+.estiloOrganigrama {
+    color: azure;
+    font-size: 2rem;
+}
+ 
+.estiloOrganigrama ol {
+    list-style: none;
+}
+ 
+.rectangulo {
+    position: relative;
+    padding: 5px;
+    box-shadow: 5px 5px 15px darkseagreen;
+}
+ 
+.contenedorOrganigrama {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+/* LEVEL-1 STYLES–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.nivel1 {
+    width: 50%;
+    margin: 0 auto 25px;
+    background: var(--nivel1Color);
+}
+.nivel1::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 20px;
+    background: var(--black);
+}
+/* nivel2 STYLES–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.nivel2Wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+ 
+ 
+figure ol {
     background-color: #1da7c9;
     border-radius: 5px;
     margin-top: 3px;
@@ -140,10 +191,13 @@ ol {
  
 li.estiloEquipo {
     background-color: #146c86;
-    color: #121723;
+    color: white;
     border-radius: 5px;
     list-style: none;
-    
+    font-size: 2.2rem;
+    padding: 3px;
+    border: 2px solid;
+    font-weight: bold;
 }
  
 a{
@@ -201,5 +255,3 @@ figure div {
         align-items: center;
     } */
 }
- 
- 

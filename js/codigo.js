@@ -5,6 +5,7 @@ const seccionMapa=document.getElementById("verMapa")
 const seccionAreas=document.getElementById("seccionAreas")
 const seccionDatos=document.getElementById("solicitudDeDatos")
 const seccionBody=document.getElementById("cuerpo")
+const seccionOrganigrama=document.getElementById("organigrama")
  
 //Contenedores
 const contenedorTareas=document.getElementById("contenedorOpciones")
@@ -69,6 +70,7 @@ function start(){
     seccionMapa.style.display="none"
     seccionDatos.style.display="none"
     seccionAreas.style.display="none"
+    seccionOrganigrama.style.display="none"
     seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1m3TuqSxxwDwjXxe_Fj7CsNkUBvdcJW1G)"
     tareas.forEach((tarea) => {
         opcionDeTareas=
@@ -90,6 +92,7 @@ function seleccionarTarea() {
         seccionDatos.style.display="grid"
         datosRequest()
     } else if (inputOrganigrama.checked) {
+        seccionOrganigrama.style.display="flex"
     } else if (inputAreas.checked){
         seccionAreas.style.display="grid"
         paginaAreas()
