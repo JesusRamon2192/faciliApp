@@ -138,5 +138,3 @@ function paginaAreas() {
 function seleccionarActividadEnetrenamiento() {
     
 }
- 
- 
