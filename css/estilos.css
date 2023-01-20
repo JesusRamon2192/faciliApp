@@ -10,7 +10,8 @@
     border: 0;
     box-sizing: border-box; 
 }
- 
+
+
 html {
     font-size: 62.5%;
 }
@@ -35,8 +36,9 @@ body {
     align-items: center;
 }
  
-.contenedorOpciones {
-    background-color: aqua;
+#contenedorOpciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
  
 #solicitudDeDatos {
@@ -143,18 +145,21 @@ input:checked + label{
     color: azure;
     font-size: 2rem;
 }
- 
+
+
 .estiloOrganigrama ol {
     list-style: none;
 }
- 
+
+
 .rectangulo {
     position: relative;
     padding: 5px;
     box-shadow: 5px 5px 15px darkseagreen;
     width: 75%;
 }
- 
+
+
 .contenedorOrganigrama {
     max-width: 1000px;
     padding: 0 10px;
@@ -185,7 +190,8 @@ input:checked + label{
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
 }
- 
+
+
 .nivel2Wrapper::before {
     content: "";
     position: absolute;
@@ -195,7 +201,8 @@ input:checked + label{
     height: 2px;
     background: var(--black);
 }
- 
+
+
 .nivel2Wrapper::after {
     display: none;
     content: "";
@@ -206,11 +213,13 @@ input:checked + label{
     height: 2px;
     background: var(--black);
 }
- 
+
+
 .nivel2Wrapper li {
     position: relative;
 }
- 
+
+
 .nivel2Wrapper > li::before {
     content: "";
     position: absolute;
@@ -221,13 +230,15 @@ input:checked + label{
     height: 23px;
     background: var(--black);
 }
- 
+
+
 .nivel2 {
     width: 91%;
     margin: 0px 11px 25px;
     background: var(--nivel2Color);
 }
- 
+
+
 .nivel2::before {
     content: "";
     position: absolute;
@@ -238,7 +249,8 @@ input:checked + label{
     height: 24px;
     background: var(--black);
 }
- 
+
+
 .nivel2::after {
     display: none;
     content: "";
@@ -250,7 +262,8 @@ input:checked + label{
     height: 2px;
     background: var(--black);
 }
- 
+
+
 /* LEVEL-3 STYLES–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .nivel3Wrapper {
     position: relative;
@@ -260,7 +273,8 @@ input:checked + label{
     width: 55%;
     margin: 0 auto;
 }
- 
+
+
 .nivel3Wrapper::before {
     display: none;
     content: "";
@@ -271,7 +285,8 @@ input:checked + label{
     height: 2px;
     background: var(--black);
 }
- 
+
+
 .nivel3Wrapper > li::before {
     content: "";
     position: absolute;
@@ -282,19 +297,22 @@ input:checked + label{
     height: 322px;
     background: var(--black);
 }
- 
+
+
 .nivel3 {
     margin-bottom: 20px;
     background: var(--nivel3Color);
 } 
- 
+
+
 /* LEVEL-4 STYLES–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .nivel4Wrapper {
     position: relative;
     width: 250%;
     margin-left: auto;
 }
- 
+
+
 .nivel4Wrapper::before {
     display: none;
     content: "";
@@ -305,16 +323,19 @@ input:checked + label{
     height: calc(100% + 20px);
     background: var(--black);
 }
- 
+
+
 .nivel4Wrapper li + li {
    margin-top: 20px;
 }
- 
+
+
 .nivel4 {
     font-weight: normal;
     background: var(--nivel4Color);
 }
- 
+
+
 .nivel4::before {
     content: "";
     position: absolute;
@@ -326,7 +347,8 @@ input:checked + label{
     background: var(--black);
 }
   
- 
+
+
 figure ol {
     background-color: #1da7c9;
     border-radius: 5px;
@@ -356,30 +378,53 @@ figcaption {
     justify-content: center;
     display: flex;
 }
- 
+
+
 .imagen {
     border-radius: 30px;
     margin-top: 15px;
     width: 212px;
     height: 175px;
 }
- 
+
+
 figure div {
     font-size: 1.8rem;
 }
- 
+
+
 .estilosAreas {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
 }
- 
+
+
 .video {
     width: 255px;
     height: 150px;
     border-radius: 15px;
 }
- 
+
+
+.contenedorContactos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.contenedorContactos h3 {
+    font-size: 1.8rem;
+}
+
+
+.contenedorContactos .estructuraImagen {
+    display: flex;
+    align-items: flex-start;
+}
+
+
 @media (max-width: 880px){
     .logo {
         position: absolute;

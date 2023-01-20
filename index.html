@@ -18,29 +18,31 @@
     </section>
  
     <section id="solicitudDeDatos">
-      <h1 class="titulo">Plan de entrenamiento</h1>
-      <h2 class="subtitulo">Solicitud de datos</h2>
-      <div >
-        <img class="logo" src="https://drive.google.com/uc?export=view&id=1Wzy0uwEIVvreEgvYaOJIm4-9IzzLzyZ0" >
+      <div id = "contenedorDatos">
+        <h1 class="titulo">Plan de entrenamiento</h1>
+        <h2 class="subtitulo">Solicitud de datos</h2>
+        <div >
+          <img class="logo" src="https://drive.google.com/uc?export=view&id=1Wzy0uwEIVvreEgvYaOJIm4-9IzzLzyZ0" >
+        </div>
+        <form class="formulario" action="" >
+          <label class="preguntas" for="nombre">
+            <span>Nombre</span>
+            <input type="text" id="nombre" width="30" name="nombre" autocomplete="name" placeholder="Nombre   Apellido" required>
+          </label>
+          <label class="preguntas" for="fecha">
+            <span>Fecha de ingreso al departamento</span>
+            <input type="date" id="fecha" width="30" required>
+          </label>
+          <label class="preguntas" for="turno">
+            <span>Turno</span>
+            <select id="turno" name="turno" placeholder="1, 2 o 3">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </label>
+        <input class="boton" type="button" id="botonDatos" value="Enviar datos">
+        </form>
       </div>
-      <form class="formulario" action="" >
-        <label class="preguntas" for="nombre">
-          <span>Nombre</span>
-          <input type="text" id="nombre" width="30" name="nombre" autocomplete="name" placeholder="Nombre   Apellido" required>
-        </label>
-        <label class="preguntas" for="fecha">
-          <span>Fecha de ingreso al departamento</span>
-          <input type="date" id="fecha" width="30" required>
-        </label>
-        <label class="preguntas" for="turno">
-          <span>Turno</span>
-          <select id="turno" name="turno" placeholder="1, 2 o 3">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </label>
-      <input class="boton" type="button" id="botonDatos" value="Enviar datos">
-      </form>
     </section>
     
     <section class="estiloSeccionActividad" id="seccionSeleccionarActividad">
@@ -65,7 +67,7 @@
       </div>
     </section>
  
-    <section id="organigrama" class="estiloOrganigrama">
+    <section id="seccionOrganigrama" class="estiloOrganigrama">
       <div class="contenedorOrganigrama">
         <h1 class="nivel1 rectangulo">Adrian Perez Acosta</h1>
         <ol class="nivel2Wrapper">
@@ -156,7 +158,8 @@
         </ol>
       </div>
     </section>
- 
+
+
     <section id="seccionAreas">
       <h1 class="titulo">Areas del departamento</h1>
       <h2 class="subtitulo">Equipos principales</h2>
@@ -223,6 +226,157 @@
         </figure>  
       </ul>
     </section>
+
+
+    <section id=seccionSmps>
+      <h1 class="titulo">SMPs</h1>
+      <h2 class="subtitulo">Torres de enfriamiento</h2>
+      <ul class="estilosAreas">
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1R79sw2dy3NoeXSgL3YhIU193xGNXUa5c" alt="imagen de smp" title="Toma de temperatura">
+            <figcaption>Toma de temperatura</figcaption>
+          </div>
+        </figure>
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=12q04zF2KwbstleQ8fnSRLSzFUX_Pc-BD" alt="imagen de smp" title="Cambio de cople">
+            <figcaption>Cambio de cople</figcaption>
+          </div>
+        </figure>
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1SaghUp4QJW6LZEG87kO9ULfqxqWmSpL9" alt="imagen de smp" title="Cambio de aceite">
+            <figcaption>Cambio de aceite</figcaption>
+          </div>
+        </figure>  
+      </ul>
+    </section>
+
+
+    <section id=seccionJsras>
+      <h1 class="titulo">JSRAs</h1>
+      <h2 class="subtitulo">Torres de enfriamiento</h2>
+      <ul class="estilosAreas">
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1PO_7ojs4Jsdu8cRAzuwI1eqarBLOXaqt" alt="imagen de jsra" title="Toma de temperatura">
+            <figcaption>Toma de temperatura</figcaption>
+          </div>
+        </figure>
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1kUqXK69K57Xykt2sx-ryjF0xBht1LZIQ" alt="imagen de jsra" title="Cambio de cople">
+            <figcaption>Cambio de cople</figcaption>
+          </div>
+        </figure>
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1rZxkOOdbPLKfsTBet6gfV-4LZNNj77vr" alt="imagen de jsra" title="Cambio de aceite">
+            <figcaption>Cambio de aceite</figcaption>
+          </div>
+        </figure>  
+      </ul>
+    </section>
+
+
+    <section id=seccionCalendars>
+      <h1 class="titulo">Calendarios</h1>
+      <h2 class="subtitulo">Torres de enfriamiento</h2>
+      <ul class="estilosAreas">
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1oMuvklKk7jX95azAyg9PUdTLJ2kNxRJs" alt="imagen de calendario" title="AM Calendar">
+            <figcaption>AM Calendar</figcaption>
+          </div>
+        </figure>
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1xXPFtce86cYFE8Ie4EpXL4Xi4OoNoyHg" alt="imagen de jsra" title="Cambio de cople">
+            <figcaption>PM Calendar</figcaption>
+          </div>
+        </figure>
+      </ul>
+    </section>
+
+
+    <section id=seccionOpls>
+      <h1 class="titulo">OPLs</h1>
+      <h2 class="subtitulo">Torres de enfriamiento</h2>
+      <ul class="estilosAreas">
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1Nr9smsZxL85eAxIW2-ueky27WQcqeeLr" alt="imagen de opl" title="Toma de temperatura">
+            <figcaption>Revision de paneles</figcaption>
+          </div>
+        </figure>
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1a_v4vhIj0KToBxtzx_45vs_oQZRCfnB7" alt="imagen de opl" title="Revision de flotador">
+            <figcaption>Revision de flotador</figcaption>
+          </div>
+        </figure>
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1GJe-Qh__gSGj8NejQVr_jG-RoUTnFXkT" alt="imagen de opl" title="Limpieza de interior">
+            <figcaption>Limpieza de interior</figcaption>
+          </div>
+        </figure>  
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=19U6gIQ0gu-d7M3w73fU5aFr4y7TmN4Lh" alt="imagen de opl" title="Inspeccion de roseador">
+            <figcaption>Inspeccion de roseador</figcaption>
+          </div>
+        </figure>  
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1-veJl6mm8AToQQbauSeoTnYZTbJ6ytWi" alt="imagen de opl" title="Inspeccion de desconectador">
+            <figcaption>Inspeccion de desconectador</figcaption>
+          </div>
+        </figure>  
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1XVKhdove9LZ7v9GULmKD4wwHKo_0EGmL" alt="imagen de opl" title="Control de temperatura">
+            <figcaption>Control de temperatura</figcaption>
+          </div>
+        </figure>  
+        <figure class="estructuraImagen">
+          <div>
+            <img class="imagen" src="https://drive.google.com/uc?export=view&id=1IzutLklyHNgOTNfbIFaGyVizz1ictyrr" alt="imagen de opl" title="Boton de paro">
+            <figcaption>Boton de paro</figcaption>
+          </div>
+        </figure>  
+      </ul>
+    </section>
+
+
+    <section id=seccionContactos>
+      <h1 class="titulo">Contactos de departamento</h1>
+      <div class="contenedorContactos">
+        <div class="estructuraImagen">
+          <h2 class="subtitulo">Grupo A</h2>
+          <h3>Supervisor: Claudio Ivan Martinez Martinez</h3>
+          <h3>Telefono: 844 277 3182</h3>
+          <h3>Team Leader: Jorge Torres</h3>
+          <h3>Telefono: 844 119 1219</h3>
+        </div>
+        <div class="estructuraImagen">
+          <h2 class="subtitulo">Grupo B</h2>
+          <h3>Supervisor: Jesus Alejandro Ramirez Morales</h3>
+          <h3>Telefono: 844 667 3860</h3>
+          <h3>Team Leader: Javier Aldape</h3>
+          <h3>Telefono: 844 285 6231</h3>
+        </div>
+        <div class="estructuraImagen">
+          <h2 class="subtitulo">Grupo C</h2>
+          <h3>Supervisor: Jesus Arnoldo Ramon Oyervides</h3>
+          <h3>Telefono: 844 183 4451</h3>
+          <h3>Team Leader: Angel Diaz</h3>
+          <h3>Telefono: 844 285 6233</h3>
+        </div>
+      </div>
+    </section>
     <script src="./js/codigo.js"></script>
 </body>
 </html>
+

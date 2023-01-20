@@ -1,20 +1,31 @@
 //Secciones
-const seccionPortada=document.getElementById("seccionPortada")
-const seccionActividad=document.getElementById("seccionSeleccionarActividad")
-const seccionMapa=document.getElementById("verMapa")
-const seccionAreas=document.getElementById("seccionAreas")
-const seccionDatos=document.getElementById("solicitudDeDatos")
-const seccionBody=document.getElementById("cuerpo")
-const seccionOrganigrama=document.getElementById("organigrama")
+const seccionPortada = document.getElementById("seccionPortada");
+const seccionActividad = document.getElementById("seccionSeleccionarActividad");
+const seccionMapa = document.getElementById("verMapa");
+const seccionAreas = document.getElementById("seccionAreas");
+const seccionDatos = document.getElementById("solicitudDeDatos");
+const seccionBody = document.getElementById("cuerpo");
+const seccionOrganigrama = document.getElementById("seccionOrganigrama");
+const seccionSmps = document.getElementById("seccionSmps");
+const seccionJsras = document.getElementById("seccionJsras");
+const seccionCalendars = document.getElementById("seccionCalendars");
+const seccionOpls = document.getElementById("seccionOpls");
+const seccionContactos = document.getElementById("seccionContactos");
  
 //Contenedores
-const contenedorTareas=document.getElementById("contenedorOpciones")
-const contenedorActividades=document.getElementById("contenedorActividades")
+const contenedorTareas=document.getElementById("contenedorOpciones");
+const contenedorActividades=document.getElementById("contenedorActividades");
+const contenedorDatos = document.getElementById("contenedorDatos");
  
 //Opciones Tareas
 let inputPlanEntrenamiento
 let inputOrganigrama
 let inputAreas
+let inputSmps
+let inputJsra
+let inputCalendars
+let inputOpls
+let inputContactos
  
 //Opciones Actividades de plan de 
 //entrenamiento
@@ -35,6 +46,7 @@ let actividades=[]
 let tareas=[]
 let opcionDeTareas
 let opcionDeActividades
+let opcionDatos
  
  
 class Tarea{
@@ -51,27 +63,36 @@ class Actividad{
     }
 }
  
-let planEntrenamiento= new Tarea("planEntrenamiento", "Plan de Entrenamiento")
-let organigrama= new Tarea("organigrama", "Organigrama del equipo")
-let areas= new Tarea("area", "Areas del Departamento")
+let planEntrenamiento= new Tarea("planEntrenamiento", "Plan de Entrenamiento");
+let organigrama= new Tarea("organigrama", "Organigrama del equipo");
+let areas= new Tarea("area", "Areas del Departamento");
+let smps = new Tarea("smps", "SMPs");
+let jsra = new Tarea("jsra", "JSRA");
+let calendars = new Tarea("calendars", "AM/PM Calendars");
+let contactos = new Tarea("contactos", "Contactos");
+let opls = new Tarea("opls", "OPLs")
  
 let desenergizarMaster= new Actividad("desenergizadoMaster", "Desenergizado de Master Pack")
 let reparacionGoteras= new Actividad("tapadoGoteras", "Tapado de goteras")
 let tomaLecturas= new Actividad("tomaLecturas", "Toma de lecturas")
  
 actividades.push(desenergizarMaster, reparacionGoteras, tomaLecturas)
-tareas.push(planEntrenamiento, organigrama, areas)
+tareas.push(areas, smps, jsra, opls, calendars, planEntrenamiento, contactos, organigrama)
  
 window.addEventListener("load", start)
  
 function start(){
-    
-    seccionActividad.style.display="none"
-    seccionMapa.style.display="none"
-    seccionDatos.style.display="none"
-    seccionAreas.style.display="none"
-    seccionOrganigrama.style.display="none"
-    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1m3TuqSxxwDwjXxe_Fj7CsNkUBvdcJW1G)"
+    seccionOrganigrama.style.display="none";
+    seccionActividad.style.display="none";
+    seccionMapa.style.display="none";
+    seccionDatos.style.display="none";
+    seccionAreas.style.display="none";
+    seccionSmps.style.display = "none";
+    seccionJsras.style.display = "none";
+    seccionCalendars.style.display = "none";
+    seccionOpls.style.display = "none";
+    seccionContactos.style.display = "none";
+    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1m3TuqSxxwDwjXxe_Fj7CsNkUBvdcJW1G)";
     tareas.forEach((tarea) => {
         opcionDeTareas=
         `<input type="radio" name="tarea" id=${tarea.id} />
@@ -80,9 +101,14 @@ function start(){
         </label> `
         contenedorTareas.innerHTML += opcionDeTareas
  
-        inputPlanEntrenamiento=document.getElementById("planEntrenamiento")
-        inputOrganigrama=document.getElementById("organigrama")
-        inputAreas=document.getElementById("area")
+        inputPlanEntrenamiento = document.getElementById("planEntrenamiento");
+        inputOrganigrama = document.getElementById("organigrama");
+        inputAreas = document.getElementById("area");
+        inputSmps = document.getElementById("smps");
+        inputJsra = document.getElementById("jsra");
+        inputCalendars = document.getElementById("calendars");
+        inputContactos = document.getElementById("contactos");
+        inputOpls = document.getElementById("opls");
     })
     botonSeleccionarTarea.addEventListener("click", seleccionarTarea)
 }
@@ -91,11 +117,37 @@ function seleccionarTarea() {
     if(inputPlanEntrenamiento.checked){
         seccionDatos.style.display="grid"
         datosRequest()
+
+
     } else if (inputOrganigrama.checked) {
         seccionOrganigrama.style.display="flex"
+
+
     } else if (inputAreas.checked){
         seccionAreas.style.display="grid"
         paginaAreas()
+
+
+    } else if (inputSmps.checked){
+        seccionSmps.style.display = "grid"
+
+
+    } else if (inputJsra.checked) {
+        seccionJsras.style.display = "grid"
+
+
+    } else if (inputCalendars.checked) {
+        seccionCalendars.style.display = "grid"
+
+
+    } else if (inputOpls.checked) {
+        seccionOpls.style.display = "grid"
+
+
+    } else if (inputContactos.checked) {
+        seccionContactos.style.display = "grid"
+
+
     } else {
         alert("Selecciona una opcion para avanzar")
         location.reload()
@@ -104,6 +156,7 @@ function seleccionarTarea() {
 }
  
 function datosRequest() {
+    contenedorDatos
     seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=19tJaPgLBqV-_EA971srDH9XIa5qF_uda)"
     seccionDatos.style.display="flex"
     botonDatos.addEventListener("click", planDeEntrenamiento)
