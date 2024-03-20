@@ -92,7 +92,7 @@ function start(){
     seccionCalendars.style.display = "none";
     seccionOpls.style.display = "none";
     seccionContactos.style.display = "none";
-    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1m3TuqSxxwDwjXxe_Fj7CsNkUBvdcJW1G)";
+    seccionBody.style.backgroundImage="url(https://jesusramon2192.github.io/faciliapp/assets/brand_wall.jpg)";
     tareas.forEach((tarea) => {
         opcionDeTareas=
         `<input type="radio" name="tarea" id=${tarea.id} />
@@ -157,7 +157,7 @@ function seleccionarTarea() {
  
 function datosRequest() {
     contenedorDatos
-    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=19tJaPgLBqV-_EA971srDH9XIa5qF_uda)"
+    seccionBody.style.backgroundImage="url(https://jesusramon2192.github.io/faciliapp/assets/Stellantis-and-the-circular-economy.jpg)"
     seccionDatos.style.display="flex"
     botonDatos.addEventListener("click", planDeEntrenamiento)
 }
@@ -184,7 +184,7 @@ function planDeEntrenamiento() {
 }
  
 function paginaAreas() {
-    seccionBody.style.backgroundImage="url(https://drive.google.com/uc?export=view&id=1qodlRQUV0uTPKGBbBzZDV8Bmqa_1VjeW)"
+    seccionBody.style.backgroundImage="url(https://jesusramon2192.github.io/faciliapp/assets/STELLA-hero-img-HP-TECH-electrification.jpg)"
     seccionBody.style.height="100%"
 }
  
